@@ -7,7 +7,7 @@ from gtts import gTTS
 from PIL import Image
 import base64
 
-st.title("Covierte tú Texto a Audio")
+st.markdown("<h1 style='text-align: center; color: blue;'>Convierte tu Texto a Audio</h1>", unsafe_allow_html=True)
 image = Image.open('UnicorniosAgua.jpeg')
 st.image(image, width=350)
 with st.sidebar:
@@ -27,7 +27,7 @@ text = st.text_area("Ingrese El texto a escuchar.")
 
 tld='com'
 option_lang = st.selectbox(
-    "Elige el lenguaje:",
+    "Elige el idioma:",
     ("Español", "English"))
 if option_lang=="Español" :
     lg='es'
