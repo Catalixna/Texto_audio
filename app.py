@@ -20,11 +20,7 @@ except:
     pass
 
 st.subheader("Texto ejemplo: ")
-st.write('En un rincón oculto de la selva, vivían los unicornios de agua,
- criaturas mágicas con cuernos cristalinos que brillaban como las estrellas. 
-Estos unicornios no galopaban, sino que se deslizaban por ríos y lagunas, purificando las aguas
- y devolviendo la vida a todo lo que tocaban. Solo aparecían ante quienes realmente protegían la naturaleza.'    
-        )
+st.write('En un rincón oculto de la selva, vivían los unicornios de agua, criaturas mágicas con cuernos cristalinos que brillaban como las estrellas. Estos unicornios no galopaban, sino que se deslizaban por ríos y lagunas, purificando las aguas y devolviendo la vida a todo lo que tocaban. Solo aparecían ante quienes realmente protegían la naturaleza.')
            
 st.markdown(f"Para escucharlo, copia el texto!!")
 text = st.text_area("Ingrese El texto a escuchar.")
