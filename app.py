@@ -7,8 +7,8 @@ from gtts import gTTS
 from PIL import Image
 import base64
 
-st.title("Conversión de Texto a Audio")
-image = Image.open('gato_raton.png')
+st.title("Covierte tú Texto a Audio")
+image = Image.open('UnicorniosAgua.jpeg')
 st.image(image, width=350)
 with st.sidebar:
     st.subheader("Esrcibe y/o selecciona texto para ser escuchado.")
@@ -19,22 +19,19 @@ try:
 except:
     pass
 
-st.subheader("Una pequeña Fábula.")
-st.write('¡Ay! -dijo el ratón-. El mundo se hace cada día más pequeño. Al principio era tan grande que le tenía miedo. '  
-         ' Corría y corría y por cierto que me alegraba ver esos muros, a diestra y siniestra, en la distancia. ' 
-         ' Pero esas paredes se estrechan tan rápido que me encuentro en el último cuarto y ahí en el rincón está '  
-         ' la trampa sobre la cual debo pasar. Todo lo que debes hacer es cambiar de rumbo dijo el gato...y se lo comió. ' 
-         '  '
-         ' Franz Kafka.'
-        
+st.subheader("Texto ejemplo: ")
+st.write('En un rincón oculto de la selva, vivían los unicornios de agua,
+ criaturas mágicas con cuernos cristalinos que brillaban como las estrellas. 
+Estos unicornios no galopaban, sino que se deslizaban por ríos y lagunas, purificando las aguas
+ y devolviendo la vida a todo lo que tocaban. Solo aparecían ante quienes realmente protegían la naturaleza.'    
         )
            
-st.markdown(f"Quieres escucharlo?, copia el texto")
+st.markdown(f"Para escucharlo, copia el texto!!")
 text = st.text_area("Ingrese El texto a escuchar.")
 
 tld='com'
 option_lang = st.selectbox(
-    "Selecciona el lenguaje",
+    "Elige el lenguaje:",
     ("Español", "English"))
 if option_lang=="Español" :
     lg='es'
@@ -54,7 +51,7 @@ def text_to_speech(text, tld,lg):
 
 #display_output_text = st.checkbox("Verifica el texto")
 
-if st.button("convertir a Audio"):
+if st.button("Escuchar"):
      result, output_text = text_to_speech(text, 'com',lg)#'tld
      audio_file = open(f"temp/{result}.mp3", "rb")
      audio_bytes = audio_file.read()
