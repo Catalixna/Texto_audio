@@ -7,7 +7,7 @@ from gtts import gTTS
 from PIL import Image
 import base64
 
-st.markdown("<h1 style='text-align: center; color: blue;'>Convierte tu Texto a Audio</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: '928c9e';'>Convierte tu Texto a Audio</h1>", unsafe_allow_html=True)
 image = Image.open('UnicorniosAgua.jpeg')
 st.image(image, width=350)
 with st.sidebar:
